@@ -1,0 +1,33 @@
+<!-- 轮播图 index.wxml-->
+<view class="circle-container">
+  <view class="circle-header">
+    <image class="circle-logo" src="../../image/circle_select.png"></image>
+    <view class="circle-desc" bindtap="showList">以下是轮播图列表</view>
+  </view>
+  <scroll-view class='circle-list' scroll-y="true">
+    <block wx:for-items="{{carouselList}}" wx:key="{{item.uuid}}">
+      <view class='circle-list-item'>
+        <view class='circle-list-item-img'>
+          <image class='circle-list-item-image' src="{{ item.pictureUrl }}"></image>
+        </view>
+        <view class='circle-list-item-content'>
+          <view class='item-con-part1'>
+            <view class='item-con-part1-status' wx:if="{{ item.status === 0 }}">已下线</view>
+            <view class='item-con-part1-status' wx:if="{{ item.status === 1}}">已上线</view>
+            <navigator  class='item-con-part1-name' url = "../carousedetail/index?carouselUuid={{item.uuid}}" open-type = "navigateTo">{{ item.title }}</navigator >
+          </view>
+          <view class='item-con-part2'>
+            <view>
+              <view>上线时间：{{ item.onlineStartTime }}</view>
+              <view>下线时间：{{ item.onlineEndTime }}</view>
+            </view>
+            <view class='item-con-part2-price'>
+              操作时间：
+              {{ item.editTime }}
+            </view>
+          </view>
+        </view>
+      </view>
+    </block>
+  </scroll-view>
+</view>

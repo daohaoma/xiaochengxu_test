@@ -1,0 +1,14 @@
+.detail-img {
+  width: 960rpx;
+  height: 210rpx;
+}
+
+.detail-upload {
+  width: 200rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  background: #ff822e;
+  color: #fff;
+  border-radius: 5px;
+}
