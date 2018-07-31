@@ -1,0 +1,7 @@
+{
+  "enablePullDownRefresh": true,
+  "onReachBottomDistance": 50,
+  "navigationBarTitleText": "轮播图列表",
+  "backgroundColor": "#eeeeee",
+  "backgroundTextStyle": "light"
+}
